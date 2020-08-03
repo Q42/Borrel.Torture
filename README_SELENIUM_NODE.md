@@ -1,4 +1,4 @@
-# Installing commands for the Selenium Node
+# Install commands for the Selenium Node
 If we ever lose the image to the Selenium Nodes please execute the following commands to install a Selenium Node from scratch, this is tested on Debian 10.
 
 ## Selenium Grid Node

@@ -1,4 +1,4 @@
-# Installing commands for the Selenium Hub
+# Install commands for the Selenium Hub
 If we ever lose the image to the Selenium Hub please execute the following commands to install a Selenium Hub from scratch, this is tested on Debian 10.
 
 ## Selenium Grid Hub
