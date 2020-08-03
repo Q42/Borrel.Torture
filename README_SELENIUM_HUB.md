@@ -42,7 +42,7 @@ Save the file and create the service itself that calls the script on startup. Ex
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/selenium-hub-start.sh
+ExecStart=/bin/bash /usr/local/bin/selenium-hub-start.sh
 
 [Install]
 WantedBy=default.target
