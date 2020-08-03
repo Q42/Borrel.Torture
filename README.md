@@ -37,8 +37,8 @@ The command is pretty self-explanatory. But in short this will start 4 conferenc
 ### Freshly Installing Hub and Nodes
 If either of the images in Google Cloud become broken or lost, follow the appropriate guides in the readmes below.
 
-- Selenium Hub Readme: [Freshly install Selenium Hub](README_SELENIUM_HUB.MD)
-- Selenium Node Readme: [Freshly install Selenium Node](README_SELENIUM_Node.MD)
+- Selenium Hub Readme: [Freshly install Selenium Hub](README_SELENIUM_HUB.md)
+- Selenium Node Readme: [Freshly install Selenium Node](README_SELENIUM_NODE.md)
 
 ## Notes
 Because of all nodes connect instantly, this is not the easiest way to test autoscaling on the Jitsi videobridges. An alternative would be to send multiple commands with fewer participants at a time and having a manual delay in between. The Selenium Hub is smart enough to only direct nodes that are idle at the moment.
