@@ -1,5 +1,5 @@
 # Borrel Torture Test
-This repository is a fork from the original (Jitsi Meet Torture)[https://github.com/jitsi/jitsi-meet-torture]. It has been forked because there are several changes have been made to the original code. These changes ensure smooth setup with multiple Selenium Grid nodes and easy integration with the Borrel room itself.
+This repository is a fork from the original [Jitsi Meet Torture](https://github.com/jitsi/jitsi-meet-torture). It has been forked because there are several changes have been made to the original code. These changes ensure smooth setup with multiple Selenium Grid nodes and easy integration with the Borrel room itself.
 
 ## Changes compared to original
 The following changes have been made to the original code;
