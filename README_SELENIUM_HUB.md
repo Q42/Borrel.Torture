@@ -52,7 +52,7 @@ Save the file and we're ready to give these files startup rights and enable the 
 
 ```
 chmod -x /usr/local/bin/selenium-hub-start.sh
-chmod -x /etc/systemd/system/selenium-hub.service
+chmod 644 /etc/systemd/system/selenium-hub.service
 systemctl daemon-reload
 systemctl enable selenium-hub.service
 ```
