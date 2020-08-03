@@ -48,7 +48,7 @@ Save the file and we're ready to give these files startup rights and enable the 
 
 ```
 chmod -x /usr/local/bin/selenium-node-start.sh
-chmod -x /etc/systemd/system/selenium-node.service
+chmod 644 /etc/systemd/system/selenium-node.service
 systemctl daemon-reload
 systemctl enable selenium-node.service
 ```
