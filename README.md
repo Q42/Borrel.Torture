@@ -5,6 +5,7 @@ This repository is a fork from the original [Jitsi Meet Torture](https://github.
 The following changes have been made to the original code;
 
 - All the nodes have the name 'Bot' in order to detect them in Borrel,
+- The first conference room name with not be suffixed with a 0. This makes testing with specific room names easier inside Borrel itself,
 - Web participants spawn an headless and non-sandboxed Chrome instance. It needs to be headless because our Google Cloud nodes don't have GPU's, which they also do not need to serve a video,
 - The resource path is pointing to the actual resource path on our nodes, this is something that has to be done in the original files.
 
