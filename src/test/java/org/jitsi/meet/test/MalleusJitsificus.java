@@ -113,6 +113,11 @@ public class MalleusJitsificus
         for (int i = 0; i < numConferences; i++)
         {
             String roomName = roomNamePrefix + i;
+
+            if(numConferences == 1) {
+                roomName = roomNamePrefix;
+            }
+
             JitsiMeetUrl url
                 = participants.getJitsiMeetUrl()
                 .setRoomName(roomName)
