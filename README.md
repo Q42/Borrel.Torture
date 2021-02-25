@@ -22,9 +22,9 @@ To save some cash we did not (yet) opt for a fixed IP on the Hub. Therefore we n
 This will show the currently connected nodes, which are probably none because we havent spun these up yet.
 
 ### Spinning up our Selenium Nodes (bots)
-The bots will start up and try to connect to the Selenium Hub. They will keep trying to reconnect every few seconds until they find the hub. There is an 'Instance Template' and appropriate image in Google Cloud. This in template can be used to start an 'Instance Group'. This instance group is a number of servers that can autoscale or have a fixed number of servers. This makes it easy to scale the number of nodes we want.
+In the instance group, click 'edit group' and set instances to the number of desired bots. After clicking 'save', the bots will start up and try to connect to the Selenium Hub. They will keep trying to reconnect every few seconds until they find the hub. Each node can mock 1 user connecting. So if you want mock 100 users to join Jitsi Meet, make sure you spin up 100 Google Cloud servers.
 
-Each node can mock 1 user connecting. So if you want mock 100 users to join Jitsi Meet, make sure you spin up 100 Google Cloud servers. To create an instance group go to the appropriate page in Google Cloud and select the `jitsi-load-test-node-small` Instance Template. Click 'edit group' and set instances to the number of desired bots. After clicking 'save', the bots will boot up.
+There is an 'Instance Template' and appropriate image in Google Cloud. This in template can be used to start an 'Instance Group'. This instance group is a number of servers that can autoscale or have a fixed number of servers. This makes it easy to scale the number of nodes we want. To create an instance group go to the appropriate page in Google Cloud and select the `jitsi-load-test-node-small` Instance Template.
 
 ### Starting the actual test
 This is where this repo comes in, either check it out locally (make sure you have Java SDK installed) or remote connect into the Selenium Hub (click the `SSH` button for `jitsi-load-test-nodes`). This already has the repo checked out at `/usr/share/borrel-torture`. In this folder you can start a torture test with the following command:
@@ -34,6 +34,9 @@ This is where this repo comes in, either check it out locally (make sure you hav
 ```
 
 The command is pretty self-explanatory. But in short this will start 4 conference rooms with 25 participants each, which will leave after 60 seconds. Please note that this will require 100 Selenium Nodes to be spawned, so please note that his is not 25 participants as you might think. Change `<ROOM_NAME>` to the name of the room you wish to join. Replace the dashes by 'B'. For example: `ABCD-1234-EFGH-5678` becomes `ABCDB1234BEFGHB5678`. To find `<INSTANCE_URL>`, open the development console when you have joined the room and type `gameData.server`.
+
+### Stopping the test
+When you're done testing, you can keep the hub server running and just scale the number of instances back to 0.
 
 ### Freshly Installing Hub and Nodes
 If either of the images in Google Cloud become broken or lost, follow the appropriate guides in the readmes below.
